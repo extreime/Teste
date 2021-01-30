@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript para Hackers - Lab</title>
+</head>
+<body>
+    <h1>Javascript para Hackers</h1>
+
+    <form onsubmit="return search()" method="post">
+        <input type="text" name="pesquisar" id="pesquisar" placeholder="Escreva aqui...">
+        <button type="submit">Pesquisar</button>
+    </form>
+    <br />
+    <a id="link">Entrar em contato</a>
+
+    <script src="js/main.min.js"></script>
+
+    <script>  
+        var payload = document.location.hash.substr(1);
+        var link = document.getElementById("link");
+        link.href = payload;
+    </script>
+</body>
+</html>
